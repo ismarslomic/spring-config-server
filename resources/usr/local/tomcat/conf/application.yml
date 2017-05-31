@@ -31,7 +31,7 @@ spring:
     cloud:
         config:
             server:
-                default-label: develop
+                default-label: master
                 git:
                     search-paths:
                       - '{application}'
