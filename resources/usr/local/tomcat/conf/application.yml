@@ -1,0 +1,44 @@
+endpoints:
+    autoconfig:
+        enabled: true
+    beans:
+        enabled: true
+    configprops:
+        enabled: true
+    dump:
+        enabled: true
+    enabled: false
+    env:
+        enabled: true
+    health:
+        enabled: true
+    info:
+        enabled: true
+    loggers:
+        enabled: true
+    metrics:
+        enabled: true
+    refresh:
+        enabled: true
+    trace:
+        enabled: true
+management:
+    context-path: /management
+    security:
+        enabled: false
+
+spring:
+    cloud:
+        config:
+            server:
+                default-label: develop
+                git:
+                    search-paths:
+                      - '{application}'
+                      - '{application}/{profile}'
+                    uri: https://github.com/ismarslomic/spring-config-server-properties
+    jackson:
+        date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+        default-property-inclusion: non_empty
+    main:
+        banner-mode: 'off'

@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  spring_config_server:
+    image: hyness/spring-cloud-config-server
+    container_name: spring_config_server
+    ports:
+     - "58083:8888"
+    volumes:
+      - ./resources/usr/local/tomcat/conf:/config
+
+volumes:
+  spring_config_server_volume:
+    external: true
